@@ -1932,14 +1932,14 @@ endif
 
 endif	# skip-makefile
 
-PHONY += FORCE
-FORCE:
+# PHONY += FORCE
+# FORCE:
 
 # Declare the contents of the .PHONY variable as phony.  We keep that
 # information in a variable so we can use it in if_changed and friends.
-.PHONY: $(PHONY)
-do_pc_lint_all : build = -f $(if $(KBUILD_SRC),$(srctree)/)scripts/Makefile.build new_pc_lint obj
-do_pc_lint_all : $(vmlinux-all) FORCE
+# .PHONY: $(PHONY)
+# do_pc_lint_all : build = -f $(if $(KBUILD_SRC),$(srctree)/)scripts/Makefile.build new_pc_lint obj
+# do_pc_lint_all : $(vmlinux-all) FORCE
 	@:
 
 pc_lint_all : do_pc_lint_all
